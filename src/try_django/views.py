@@ -2,11 +2,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home_page(request):
-    return render(request, "hello_world.html")
+    title = "hello there ... "
+    return render(request, "hello_world.html", {"title":title})
 
 def about_page(request):
-    return HttpResponse("<h1> about us </h1>")
+    return render(request, "hello_world.html", {"title": "About Us"})
     
 def contact_page(request):
-    return HttpResponse("<h1> contact us </h1>")
-            
+    return render(request, "hello_world.html", {"title": "Contact Us"})
+        
