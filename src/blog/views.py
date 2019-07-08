@@ -4,7 +4,7 @@ from django.shortcuts import render
 from .models import BlogPost
 
 
-def blog_post_detail_page(request):
+def blog_post_detail_page(request, post_id):
     obj = BlogPost.objects.get(id=1)
     template_name = 'blog_post_detail_page.html'
     context = {"object": obj}
