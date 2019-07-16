@@ -13,7 +13,8 @@ def about_page(request):
     return render(request, "about.html", {"title": "About Us"})
     
 def contact_page(request):
-    return render(request, "hello_world.html", {"title": "Contact Us"})
+    print(request.POST)
+    return render(request, "form.html", {"title": "Contact Us"})
 
 def example_page(request):
     context         = {"title": "Example"}
